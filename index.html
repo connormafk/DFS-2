@@ -1,0 +1,34 @@
+ <div class="circle">
+    <h1 class="h1">circle</h1>
+  </div>
+
+  <style>
+.circle {
+  width: 200px;
+  height: 200px;
+  background: purple;
+  border-radius: 50%;
+  position: fixed;
+	}
+  
+.h1 {
+  color: gold;
+  font-family: Futura, sans-serif;
+  font-weight: bold;
+  font-size:  20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 180px;
+  text-transform: uppercase;
+  position: relative;
+  	}
+  </style>
+
+  <script type="text/javascript">
+ window.addEventListener('mousemove', function(event){
+  console.log(event.clientX);
+  document.getElementsByClassName("circle")[0].style.top = event.clientY + "px";
+  document.getElementsByClassName("circle")[0].style.left = event.clientX + "px";
+	});
+  </script>
